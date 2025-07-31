@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilla de Tareas - Horario de Estudio</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-top">
+                <div class="header-title">
+                    <i data-feather="check"></i>
+                    <span>Planilla de Tareas</span>
+                    <i data-feather="calendar"></i>
+                    <span style="font-size: 14px;">Horario de Estudio</span>
+                </div>
+                <button class="add-btn" onclick="toggleAddForm()">
+                    <i data-feather="plus"></i>
+                    <span>Agregar</span>
+                </button>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-text">
+                    <span id="progress-text">Progreso: 0/0 tareas</span>
+                    <span id="progress-percent">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Task Form -->
+        <div class="add-form" id="add-form">
+            <div class="form-grid">
+                <input type="text" class="form-input" id="new-date" placeholder="Fecha (dd/mm)">
+                <input type="text" class="form-input" id="new-time" placeholder="Horario (9:00/12:30)">
+                <input type="text" class="form-input" id="new-task" placeholder="Descripción de la tarea">
+                <button class="form-btn" onclick="addTask()">Agregar Tarea</button>
+            </div>
+        </div>
+
+        <!-- Tasks List -->
+        <div id="tasks-container"></div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p id="footer-text">¡Comienza a marcar tus tareas!</p>
+        </div>
+    </div>
+
+    <!-- Conexión al archivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
